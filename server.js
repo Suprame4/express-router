@@ -6,6 +6,9 @@ const port = 3000
 const fruitRouter = require('./routes/fruit')
 const userRouter = require('./routes/user')
 
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
 // Express Routes
 app.use('/fruit', fruitRouter)
 
